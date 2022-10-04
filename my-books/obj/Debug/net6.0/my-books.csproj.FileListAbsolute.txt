@@ -60,3 +60,16 @@ C:\Users\Will\Desktop\Web development\csharp\my-books\my-books\obj\Debug\net6.0\
 C:\Users\Will\Desktop\Web development\csharp\my-books\my-books\obj\Debug\net6.0\my-books.genruntimeconfig.cache
 C:\Users\Will\Desktop\Web development\csharp\my-books\my-books\obj\Debug\net6.0\ref\my-books.dll
 C:\Users\Will\Desktop\Web development\csharp\my-books\my-books\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\Will\Desktop\Web development\csharp\my-books\my-books\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.Versioning.dll
+C:\Users\Will\Desktop\Web development\csharp\my-books\my-books\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Will\Desktop\Web development\csharp\my-books\my-books\bin\Debug\net6.0\Serilog.dll
+C:\Users\Will\Desktop\Web development\csharp\my-books\my-books\bin\Debug\net6.0\Serilog.AspNetCore.dll
+C:\Users\Will\Desktop\Web development\csharp\my-books\my-books\bin\Debug\net6.0\Serilog.Extensions.Hosting.dll
+C:\Users\Will\Desktop\Web development\csharp\my-books\my-books\bin\Debug\net6.0\Serilog.Extensions.Logging.dll
+C:\Users\Will\Desktop\Web development\csharp\my-books\my-books\bin\Debug\net6.0\Serilog.Formatting.Compact.dll
+C:\Users\Will\Desktop\Web development\csharp\my-books\my-books\bin\Debug\net6.0\Serilog.Settings.Configuration.dll
+C:\Users\Will\Desktop\Web development\csharp\my-books\my-books\bin\Debug\net6.0\Serilog.Sinks.Console.dll
+C:\Users\Will\Desktop\Web development\csharp\my-books\my-books\bin\Debug\net6.0\Serilog.Sinks.Debug.dll
+C:\Users\Will\Desktop\Web development\csharp\my-books\my-books\bin\Debug\net6.0\Serilog.Sinks.File.dll
+C:\Users\Will\Desktop\Web development\csharp\my-books\my-books\bin\Debug\net6.0\Serilog.Sinks.MSSqlServer.dll
+C:\Users\Will\Desktop\Web development\csharp\my-books\my-books\bin\Debug\net6.0\Serilog.Sinks.PeriodicBatching.dll

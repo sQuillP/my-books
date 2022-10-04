@@ -1,3 +1,5 @@
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Versioning;
 using Microsoft.EntityFrameworkCore;
 using my_books.Data;
 using my_books.Data.Models.Services;
@@ -18,6 +20,16 @@ builder.Services.AddTransient<BooksService>();
 builder.Services.AddTransient<AuthorsService>();
 builder.Services.AddTransient<PublisherService>();
 
+//api based versioning
+
+
+builder.Services.AddApiVersioning(config =>
+{
+    config.DefaultApiVersion = new ApiVersion(1, 0);
+    config.AssumeDefaultVersionWhenUnspecified = true;
+    // config.ApiVersionReader = new HeaderApiVersionReader("custom-version-header");
+    //config.ApiVersionReader = new MediaTypeApiVersionReader();
+});
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -26,6 +38,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+
 
 //app.ConfigureBuildInExceptionHandler();
 app.ConfigureCustomExceptionHandler();

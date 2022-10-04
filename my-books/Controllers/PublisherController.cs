@@ -18,6 +18,19 @@ namespace my_books.Controllers
             this.publisherDb = publisherService;
         }
 
+        [HttpGet("get-all-publishers")]
+        public IActionResult GetAllPublishers(string? sortBy, string? searchString, int?pageNumber)
+        {
+            try
+            {
+                var allPublishers = publisherDb.GetAllPublishers(sortBy,searchString,pageNumber);
+                return Ok(allPublishers);
+            }
+            catch (Exception e)
+            {
+                return BadRequest("Sorry, we could not load the publishers");
+            }
+        }
 
         [HttpPost("add-publisher")]
         public IActionResult CreatePublisher(PublisherVM publisherVM)
@@ -37,21 +50,32 @@ namespace my_books.Controllers
             }
         }
         [HttpGet("get-publisher-by-id/{id}")]
-        public ActionResult<CustomActionResult> GetPublisherById(int id)
+        //ActionResult<CustomActionResult>
+        public IActionResult GetPublisherById(int id)
         {
             //throw new Exception("This is an exception that will be handled by middleware");
             var _response = publisherDb.GetPublisherById(id);
             if(_response != null)
             {
-                var _responseObj = new CustomActionResultVM()
-                {
-                    Publisher = _response
-                };
+                //var _responseObj = new CustomActionResultVM()
+                //{
+                //    Publisher = _response
+                //};
 
-                return new CustomActionResult(_responseObj);
+                return Ok(_response);
+                //return new CustomActionResult(_responseObj);
                //return _response;
             }
-            return (NotFound());
+            else
+            {
+                //var _responseObj = new CustomActionResultVM()
+                //{
+                //    Exception = new Exception("This is coming from publishers controller.")
+                //};
+
+                //return new CustomActionResult(_responseObj);
+                return NotFound();
+            }
         }
 
        
@@ -77,5 +101,8 @@ namespace my_books.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
+
+
     }
 }
